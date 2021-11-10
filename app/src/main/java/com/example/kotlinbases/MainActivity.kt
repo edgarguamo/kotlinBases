@@ -12,7 +12,9 @@ class MainActivity : AppCompatActivity() {
         println("============================")
         // Validar si una persona es mayor de edad
 
+        println("============================")
         println("Ejercicio 1")
+        println("============================")
 
         val nameArray = arrayListOf<String>("Carlos", "Elvis","Raissa")
         val ageArray = arrayListOf<Int>(18,22,15)
@@ -28,7 +30,9 @@ class MainActivity : AppCompatActivity() {
         }
         // Presentar la tabla de multiplicar de n numeros de forma ascente y descendente
 
+        println("============================")
         println("\nEjercicio 2\n")
+        println("============================")
 
         val multiplicand = 10
         val multiplier = 10
@@ -50,6 +54,9 @@ class MainActivity : AppCompatActivity() {
         /* Mostrar el listado de paralelo de la materia
             de plataformasd móviles y los subgrupos por proyectos
          */
+        println("============================")
+        println(" ejercicio 3")
+        println("============================")
         val studentsArray = arrayListOf<String>("Brandon", "Jorge","Luis", "Edgar")
         val subGroupArray = arrayListOf<String>("Misk'y", "Hackers", "Undefined")
 
@@ -63,6 +70,79 @@ class MainActivity : AppCompatActivity() {
         motor, tipo de vehículo, capacidad
          */
 
+        println("============================")
+        println("Ejercicio 4")
+        println("============================")
+        val vehiculo = Vehiculo("Suzuki",20.2,"y-7000","Camioneta",20)
+        println(vehiculo.toString())
+
+        /*
+        Ejercicio cedula
+         */
+        println("============================")
+        println("Ejercicio 5")
+        println("============================")
+        val cedulaArray = arrayListOf<String>("1104759061", "1784559964", "1711112969")
+        // suma de valores
+        for(cedula in cedulaArray){
+
+            println()
+            println("Cedula")
+            println(cedula)
+            println("212121212")
+            var posicion = 0
+            var total = 0
+
+            while(posicion < 9){
+                val multiplicador = if ( posicion % 2 == 0 ) 2 else 1
+                var subtotal = cedula[posicion].digitToInt() * multiplicador
+                if ( subtotal > 10 ){
+                    var aux5 = 0
+                    for (num in subtotal.toString()){
+                        aux5+=num.digitToInt()
+                    }
+                    subtotal = aux5
+                }
+                total+=subtotal
+                posicion++
+            }
+            val valorResta = (total.toString()[0].digitToInt()+1)*10
+            println("La suma de los digitos de la cedula es: $total")
+            println("El valor a restar es: $valorResta")
+            println("La resta de los digitos es: "+ (valorResta - total) + " el ulitmo digito de " +
+                    "la cedula es " + cedula[9])
+        }
+
+
 
     }
+}
+class Vehiculo(
+    private var modelo: String,
+    private var traccion: Double,
+    private var motor: String,
+    private var tipo: String,
+    private var capacidad: Int
+) {
+    override fun toString(): String {
+        return "Vehiculo(modelo='$modelo', traccion=$traccion, motor='$motor', tipo='$tipo', " +
+                "capacidad=$capacidad)"
+    }
+    fun setModelo(modelo:String){
+        this.modelo = modelo
+    }
+    fun setTraccion(traccion: Double){
+        this.traccion=traccion
+    }
+    fun setMotor(motor: String){
+        this.motor=motor
+    }
+    fun setTipo(tipo: String){
+        this.tipo=tipo
+    }
+    fun setCapacidad(capacidad: Int){
+        this.capacidad=capacidad
+    }
+
+
 }
