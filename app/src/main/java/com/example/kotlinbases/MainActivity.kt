@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         val ageArray = arrayListOf<Int>(18,22,15)
         var aux = 0
 
-        for (position in ageArray ){
+        for(position in ageArray ){
             if (position >= 18){
                 println(nameArray[aux] + " es mayor de edad")
             }else{
@@ -30,8 +30,8 @@ class MainActivity : AppCompatActivity() {
 
         println("\nEjercicio 2\n")
 
-        var multiplicand = 10
-        var multiplier = 10
+        val multiplicand = 10
+        val multiplier = 10
         var aux2 = 1
 
         println("\nAscendente\n")
@@ -53,8 +53,8 @@ class MainActivity : AppCompatActivity() {
         val studentsArray = arrayListOf<String>("Brandon", "Jorge","Luis", "Edgar")
         val subGroupArray = arrayListOf<String>("Misk'y", "Hackers", "Undefined")
 
-        studentsArray.sort();
-        subGroupArray.sort();
+        studentsArray.sort()
+        subGroupArray.sort()
         println(studentsArray)
         println(subGroupArray)
 
