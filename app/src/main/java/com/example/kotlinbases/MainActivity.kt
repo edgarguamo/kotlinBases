@@ -75,6 +75,8 @@ class MainActivity : AppCompatActivity() {
         println("============================")
         val vehiculo = Vehiculo("Suzuki",20.2,"y-7000","Camioneta",20)
         println(vehiculo.toString())
+        vehiculo.setTipo("auto urbano")
+        println(vehiculo.toString())
 
         /*
         Ejercicio cedula
