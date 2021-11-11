@@ -114,6 +114,27 @@ class MainActivity : AppCompatActivity() {
             println("La resta de los digitos es: "+ (valorResta - total) + " el ulitmo digito de " +
                     "la cedula es " + cedula[9])
         }
+        // Ordenar un array de de  números sin usar sort
+        // Ordenación metodo burbuja
+
+        val numArray = arrayListOf<Int>(8,5,6,9,1,4,7)
+        println("Array Sin Ordenar")
+        numArray.forEach{ println(it)}
+        var tem: Int
+        for(i in (0 until numArray.size-1)){
+            for (j in (0 until  numArray.size-1)){
+                if(numArray[j]>numArray[j+1]){
+                    tem = numArray[j]
+                    numArray[j] = numArray[j+1]
+                    numArray[j+1] = tem
+                }
+            }
+        }
+        println("Array Ordenada")
+        numArray.forEach{println(it)}
+
+
+
 
 
 
